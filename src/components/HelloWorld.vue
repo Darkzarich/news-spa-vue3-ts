@@ -99,6 +99,7 @@
         >
       </li>
       <li>
+        {{ unit.name }}
         <a
           href="https://github.com/vuejs/awesome-vue"
           target="_blank"
@@ -111,14 +112,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 
-export default defineComponent({
-  name: "HelloWorld",
-  props: {
-    msg: String
-  }
-});
+export default defineComponent(() => ({
+  unit: reactive({
+    name: "Mike",
+    level: 96
+  })
+}));
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
